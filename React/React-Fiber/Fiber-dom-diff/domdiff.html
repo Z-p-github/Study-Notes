@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM DIFF | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="前端技术相关的文章，包含不限于vue，react，webpack，nodejs，算法等等">
+    
+    <link rel="preload" href="/assets/css/0.styles.1bd58bef.css" as="style"><link rel="preload" href="/assets/js/app.a5e2a326.js" as="script"><link rel="preload" href="/assets/js/2.a6634917.js" as="script"><link rel="preload" href="/assets/js/6.4eaec7b1.js" as="script"><link rel="preload" href="/assets/js/11.8af1e3cd.js" as="script"><link rel="prefetch" href="/assets/js/10.d3f689f8.js"><link rel="prefetch" href="/assets/js/12.ed1e11ae.js"><link rel="prefetch" href="/assets/js/13.e0a441de.js"><link rel="prefetch" href="/assets/js/14.9e318840.js"><link rel="prefetch" href="/assets/js/15.d841da4f.js"><link rel="prefetch" href="/assets/js/16.34930d07.js"><link rel="prefetch" href="/assets/js/17.07cd49aa.js"><link rel="prefetch" href="/assets/js/18.39517720.js"><link rel="prefetch" href="/assets/js/19.1f1689c7.js"><link rel="prefetch" href="/assets/js/20.84a7ddf3.js"><link rel="prefetch" href="/assets/js/21.d47f1b28.js"><link rel="prefetch" href="/assets/js/22.3f16cfa0.js"><link rel="prefetch" href="/assets/js/23.f86859e1.js"><link rel="prefetch" href="/assets/js/24.b73b4835.js"><link rel="prefetch" href="/assets/js/25.d3f53bc9.js"><link rel="prefetch" href="/assets/js/26.ee307239.js"><link rel="prefetch" href="/assets/js/27.eaad36cd.js"><link rel="prefetch" href="/assets/js/28.2ea9696e.js"><link rel="prefetch" href="/assets/js/29.0f3fa806.js"><link rel="prefetch" href="/assets/js/3.c79fccf9.js"><link rel="prefetch" href="/assets/js/30.9a0696b4.js"><link rel="prefetch" href="/assets/js/31.89a9820d.js"><link rel="prefetch" href="/assets/js/32.dba916d1.js"><link rel="prefetch" href="/assets/js/33.4c1838f9.js"><link rel="prefetch" href="/assets/js/34.968a05eb.js"><link rel="prefetch" href="/assets/js/35.88ee813d.js"><link rel="prefetch" href="/assets/js/36.ec349609.js"><link rel="prefetch" href="/assets/js/37.7f17ec10.js"><link rel="prefetch" href="/assets/js/38.1844a26b.js"><link rel="prefetch" href="/assets/js/39.3f1bd3ec.js"><link rel="prefetch" href="/assets/js/4.baf3274c.js"><link rel="prefetch" href="/assets/js/40.e03e4557.js"><link rel="prefetch" href="/assets/js/41.a69c6022.js"><link rel="prefetch" href="/assets/js/42.705f89ae.js"><link rel="prefetch" href="/assets/js/43.9fb62012.js"><link rel="prefetch" href="/assets/js/5.f40b1275.js"><link rel="prefetch" href="/assets/js/7.5b3397e2.js"><link rel="prefetch" href="/assets/js/8.7c035891.js"><link rel="prefetch" href="/assets/js/9.0f0a6fdc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1bd58bef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/Z-p-github/doc-front-end" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/Z-p-github/doc-front-end" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">主页</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JavaScript/小顶堆.html" class="sidebar-link">小顶堆</a></li><li><a href="/JavaScript/位运算.html" class="sidebar-link">位运算</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>React Fiber</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/React-Fiber/React理念.html" class="sidebar-link">React理念</a></li><li><a href="/React/React-Fiber/ReactFiber架构.html" class="sidebar-link">Fiber架构</a></li><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading open"><span>React Fiber Render</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/React-Fiber/Fiber-dom-diff/beginWork.html" class="sidebar-link">beginWork阶段</a></li><li><a href="/React/React-Fiber/Fiber-dom-diff/completeWork.html" class="sidebar-link">completeWork阶段</a></li><li><a href="/React/React-Fiber/Fiber-dom-diff/commit.html" class="sidebar-link">commit阶段</a></li><li><a href="/React/React-Fiber/Fiber-dom-diff/domdiff.html" aria-current="page" class="active sidebar-link">completeWork-diff阶段</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/React/React-Fiber/Fiber-dom-diff/domdiff.html#dom-diff" class="sidebar-link">DOM DIFF</a></li><li class="sidebar-sub-header"><a href="/React/React-Fiber/Fiber-dom-diff/domdiff.html#新的节点是单节点" class="sidebar-link">新的节点是单节点</a></li><li class="sidebar-sub-header"><a href="/React/React-Fiber/Fiber-dom-diff/domdiff.html#新的节点是多节点" class="sidebar-link">新的节点是多节点</a></li></ul></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading"><span>Concurrent Mode</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/Concurrent-Mode/React中的事件优先级调度.html" class="sidebar-link">React事件优先级调度</a></li><li><a href="/React/Concurrent-Mode/scheduler.html" class="sidebar-link">scheduler具体实现</a></li><li><a href="/React/Concurrent-Mode/lane.html" class="sidebar-link">lane模型</a></li></ul></section></li><li><a href="/React/React17.html" class="sidebar-link">React17</a></li><li><a href="/React/React18.html" class="sidebar-link">React18</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Vue/Vue3+Typescript实现Form组件.html" class="sidebar-link">Vue3+Typescript实现Form组件</a></li><li><a href="/Vue/搭建vue3和ts组件库开发环境.html" class="sidebar-link">搭建vue3和ts组件库开发环境</a></li><li><a href="/Vue/Vite2配置项目开发环境.html" class="sidebar-link">Vite2配置项目开发环境</a></li><li><a href="/Vue/基于Element-plus实现虚拟下拉组件.html" class="sidebar-link">基于Element-plus实现虚拟下拉组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端生态</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/前端生态/eslint.html" class="sidebar-link">eslint</a></li><li><a href="/前端生态/flutter实践.html" class="sidebar-link">flutter实践</a></li><li><a href="/前端生态/flutter消息推送.html" class="sidebar-link">flutter消息推送</a></li><li><a href="/前端生态/antd5架构分析.html" class="sidebar-link">antd5研究</a></li><li><a href="/前端生态/element-plus架构分析.html" class="sidebar-link">element-plus样式+打包分析</a></li><li><a href="/前端生态/ts类型打包.html" class="sidebar-link">ts类型打包</a></li><li><a href="/前端生态/vscode扩展工具.html" class="sidebar-link">vscode扩展工具实现</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>go</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/go/mac如何安装grpc.html" class="sidebar-link">mac安装grpc</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="dom-diff"><a href="#dom-diff" class="header-anchor">#</a> DOM DIFF</h2> <p><code>react dom diff</code>分很多中情况，diff 阶段主要是在<code>beginWork</code>的 <code>reconcileChildren</code>方法中进行,<code>reconcileChildren</code>方法接受三个参数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//参数分别是 1、老的fiber节点，2、新的构建中的fiber节点，新的fiber节点的child节点</span>
+<span class="token keyword">function</span> <span class="token function">reconcileChildren</span><span class="token punctuation">(</span><span class="token parameter">current<span class="token punctuation">,</span> workInProgress<span class="token punctuation">,</span> nextChildren</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>我们主要从以下几种情况入手</p> <h2 id="新的节点是单节点"><a href="#新的节点是单节点" class="header-anchor">#</a> 新的节点是单节点</h2> <p>1、新的节点是一个单节点，就是只有一个节点的意思
+只有一个单节点的情况下，会去执行 <code>reconcileSingleElement</code> 这个方法，这个方法接受三个参数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">deleteRemainingChildren</span><span class="token punctuation">(</span><span class="token parameter">returnFiber<span class="token punctuation">,</span> childToDelete</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>childToDelete<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> childToDelete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    childToDelete <span class="token operator">=</span> childToDelete<span class="token punctuation">.</span>sibling<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * 协调单节点
+ * @param {*} returnFiber  新的父fiber
+ * @param {*} currentFirstChild 第一个旧fiber
+ * @param {*} element 新的要渲染的虚拟DOM是一个原生DOM节点
+ * @returns
+ */</span>
+<span class="token keyword">function</span> <span class="token function">reconcileSingleElement</span><span class="token punctuation">(</span><span class="token parameter">returnFiber<span class="token punctuation">,</span> currentFirstChild<span class="token punctuation">,</span> element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//获取新的虚拟DOM的key</span>
+  <span class="token keyword">let</span> key <span class="token operator">=</span> element<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+  <span class="token comment">//获取第一个老的fiber节点</span>
+  <span class="token keyword">let</span> child <span class="token operator">=</span> currentFirstChild<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//老fiber的ekey和新的虚拟DOM的key相同说明</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>child<span class="token punctuation">.</span>key <span class="token operator">===</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//判断老的fiber的type和新的虚拟DOMtype是否相同</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>child<span class="token punctuation">.</span>type <span class="token operator">==</span> element<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//准备复用child老fiber节点，删除剩下的其它fiber</span>
+        <span class="token function">deleteRemainingChildren</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">.</span>sibling<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//在复用老fiber的时候，会传递新的虚拟DOM的属性对象到新fiber的pendingProps上</span>
+        <span class="token keyword">const</span> existing <span class="token operator">=</span> <span class="token function">useFiber</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> element<span class="token punctuation">.</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        existing<span class="token punctuation">.</span>return <span class="token operator">=</span> returnFiber<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> existing<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">//已经配上key了，但是type不同，则删除包括当前的老fiber在内所所有后续的老fibe</span>
+        <span class="token function">deleteRemainingChildren</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">//如果相同说明当前这个老fiber不是对应于新的虚拟DOM节点 把此老fiber标记为删除，并且继续弟弟</span>
+      <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//继续匹配弟弟们</span>
+    child <span class="token operator">=</span> child<span class="token punctuation">.</span>sibling<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> created <span class="token operator">=</span> <span class="token function">createFiberFromElement</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//div#title</span>
+  created<span class="token punctuation">.</span>return <span class="token operator">=</span> returnFiber<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> created<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>单节点里面，首先会去判断老的 <code>child fiber</code> 节点的 <code>key</code> 和新的 <code>element</code> 是不是一样的，如果不是就将老的节点标记为删除，依次去遍历兄弟节点 <code>child.sibling</code>。如果在老的 <code>fiber</code> 节点中找到了一个 <code>key</code> 和 <code>type</code> 都相等的 <code>fiber</code> 节点，则进行一个复用，根据老的子 <code>fiber</code> 节点和新的 <code>element</code> 的属性（props）生成一个新的 <code>fiber</code> 节点，并且进行一个 <code>return</code> 的指向，指向 <code>returnFiber</code>,然后会去删除老的节点上的其他<code>fiber</code>节点。</p> <h2 id="新的节点是多节点"><a href="#新的节点是多节点" class="header-anchor">#</a> 新的节点是多节点</h2> <p>首先他们会到这个方法中去进行一个 diff 操作</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * returnFiber 父fiber节点
+ * currentFirstChild 老的第一个儿子节点
+ * newChildren 新的儿子节点
+ */</span>
+<span class="token comment">//这个方法里面会有不同条件下的三个循环操作</span>
+<span class="token keyword">function</span> <span class="token function">reconcileChildrenArray</span><span class="token punctuation">(</span><span class="token parameter">returnFiber<span class="token punctuation">,</span> currentFirstChild<span class="token punctuation">,</span> newChildren</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//将要返回的第一个新fiber</span>
+  <span class="token keyword">let</span> resultingFirstChild <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token comment">//上一个新fiber</span>
+  <span class="token keyword">let</span> previousNewFiber <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token comment">//当前的老fiber</span>
+  <span class="token keyword">let</span> oldFiber <span class="token operator">=</span> currentFirstChild<span class="token punctuation">;</span>
+  <span class="token comment">//下一个老fiber</span>
+  <span class="token keyword">let</span> nextOldFiber <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token comment">//新的虚拟DOM的索引</span>
+  <span class="token keyword">let</span> newIdx <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token comment">//指的上一个可以复用的，不需要移动的节点的老索引</span>
+  <span class="token keyword">let</span> lastPlacedIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token comment">//处理更新的情况 老fiber和新fiber都存在</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> oldFiber <span class="token operator">&amp;&amp;</span> newIdx <span class="token operator">&lt;</span> newChildren<span class="token punctuation">.</span>length<span class="token punctuation">;</span> newIdx<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//先缓存下一个老fiber</span>
+    nextOldFiber <span class="token operator">=</span> oldFiber<span class="token punctuation">.</span>sibling<span class="token punctuation">;</span>
+    <span class="token comment">//试图复用才fiber</span>
+    <span class="token keyword">const</span> newFiber <span class="token operator">=</span> <span class="token function">updateSlot</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> oldFiber<span class="token punctuation">,</span> newChildren<span class="token punctuation">[</span>newIdx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//如果key 不一样，直接跳出第一轮循环</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>newFiber<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//跳出第一轮循环</span>
+    <span class="token comment">//老fiber存在，但是新的fiber并没有复用老fiber</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>oldFiber <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>newFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> oldFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//核心是给当前的newFiber添加一个副作用flags 叫新增</span>
+    lastPlacedIndex <span class="token operator">=</span> <span class="token function">placeChild</span><span class="token punctuation">(</span>newFiber<span class="token punctuation">,</span> lastPlacedIndex<span class="token punctuation">,</span> newIdx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>previousNewFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      resultingFirstChild <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//resultingFirstChild=&gt;li(A)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      previousNewFiber<span class="token punctuation">.</span>sibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//liB.sibling=li(C)</span>
+    <span class="token punctuation">}</span>
+    previousNewFiber <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//previousNewFiber=&gt;li(C)</span>
+    oldFiber <span class="token operator">=</span> nextOldFiber<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>newIdx <span class="token operator">===</span> newChildren<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//1!=6</span>
+    <span class="token function">deleteRemainingChildren</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> oldFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> resultingFirstChild<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//如果没有老fiber了</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>oldFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//oldFIber现在指向B，有的，进不出</span>
+    <span class="token comment">//循环虚拟DOM数组， 为每个虚拟DOM创建一个新的fiber</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> newIdx <span class="token operator">&lt;</span> newChildren<span class="token punctuation">.</span>length<span class="token punctuation">;</span> newIdx<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> newFiber <span class="token operator">=</span> <span class="token function">createChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> newChildren<span class="token punctuation">[</span>newIdx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//li(C)</span>
+      lastPlacedIndex <span class="token operator">=</span> <span class="token function">placeChild</span><span class="token punctuation">(</span>newFiber<span class="token punctuation">,</span> lastPlacedIndex<span class="token punctuation">,</span> newIdx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>previousNewFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        resultingFirstChild <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//resultingFirstChild=&gt;li(A)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        previousNewFiber<span class="token punctuation">.</span>sibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//liB.sibling=li(C)</span>
+      <span class="token punctuation">}</span>
+      previousNewFiber <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//previousNewFiber=&gt;li(C)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> resultingFirstChild<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//将剩下的老fiber放入map中</span>
+  <span class="token keyword">const</span> existingChildren <span class="token operator">=</span> <span class="token function">mapRemainingChildren</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> oldFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> newIdx <span class="token operator">&lt;</span> newChildren<span class="token punctuation">.</span>length<span class="token punctuation">;</span> newIdx<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//去map中找找有没key相同并且类型相同可以复用的老fiber 老真实DOM</span>
+    <span class="token keyword">const</span> newFiber <span class="token operator">=</span> <span class="token function">updateFromMap</span><span class="token punctuation">(</span>
+      existingChildren<span class="token punctuation">,</span>
+      returnFiber<span class="token punctuation">,</span>
+      newIdx<span class="token punctuation">,</span>
+      newChildren<span class="token punctuation">[</span>newIdx<span class="token punctuation">]</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>newFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//说明是复用的老fiber</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>newFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        existingChildren<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>newFiber<span class="token punctuation">.</span>key <span class="token operator">||</span> newIdx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      lastPlacedIndex <span class="token operator">=</span> <span class="token function">placeChild</span><span class="token punctuation">(</span>newFiber<span class="token punctuation">,</span> lastPlacedIndex<span class="token punctuation">,</span> newIdx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>previousNewFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        resultingFirstChild <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//resultingFirstChild=&gt;li(A)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        previousNewFiber<span class="token punctuation">.</span>sibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//liB.sibling=li(C)</span>
+      <span class="token punctuation">}</span>
+      previousNewFiber <span class="token operator">=</span> newFiber<span class="token punctuation">;</span> <span class="token comment">//previousNewFiber=&gt;li(C)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//map中剩下是没有被 复用的，全部删除</span>
+  existingChildren<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> resultingFirstChild<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>第一个循环，在 <code>updateSlot</code> 方法里面会先尝试的去复用老的 fiber，如果不能服用（key 不一样），会直接跳出第一个循环，如果可以复用</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//如果key一样，但是却没有复用老的fiber，判断有没有复用老的fiber，就是看这个fiber节点有没有alternate，因为如果可以复用老的fiber节点，源码里面会将 老的fiber节点和新的虚拟dom的新属性曲生成一个新的workInProgress fiber，老新节点节点之间会用alternate相互指向</span>
+<span class="token comment">//----所以下面这句话就是，如果老的fiber存在但是新生成的fiber却没有复用，那么就去删除老的fiber，给他添加一个删除的 `effectTag`</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>oldFiber <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>newFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> oldFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//placeChild方法中会去给新的fiber节点打上一个新增的`effectTag`,在这个里面也会去判断节点移动的情况</span>
+<span class="token keyword">function</span> <span class="token function">placeChild</span><span class="token punctuation">(</span><span class="token parameter">newFiber<span class="token punctuation">,</span> lastPlacedIndex<span class="token punctuation">,</span> newIdx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  newFiber<span class="token punctuation">.</span>index <span class="token operator">=</span> newIdx<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>shouldTrackSideEffects<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lastPlacedIndex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> current <span class="token operator">=</span> newFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">;</span>
+  <span class="token comment">//如果有current说是更新，复用老节点的更新，不会添加Placement</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> oldIndex <span class="token operator">=</span> current<span class="token punctuation">.</span>index<span class="token punctuation">;</span>
+    <span class="token comment">//如果老fiber它对应的真实DOM挂载的索引比lastPlacedIndex小</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>oldIndex <span class="token operator">&lt;</span> lastPlacedIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//老fiber对应的真实DOM就需要移动了</span>
+      newFiber<span class="token punctuation">.</span>flags <span class="token operator">|=</span> Placement<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> lastPlacedIndex<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">//否则 不需要移动 并且把老fiber它的原来的挂载索引返回成为新的lastPlacedIndex</span>
+      <span class="token keyword">return</span> oldIndex<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    newFiber<span class="token punctuation">.</span>flags <span class="token operator">=</span> Placement<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> lastPlacedIndex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在最后一个循环中，会将老的 fiber 节点，生成一个 map，以 key 为 map 对象的 key，fiber 节点为 map 的 value，然后每次循环的时候，用新的虚拟 dom 的 key 去里面查找，看看能不能复用，如果<code>alternate</code>存在说明能够复用，不存在话就调用<code>placeChild</code>方法去处理移动或者新增</p> <p><strong>每次<code>placeChild</code>的时候会给新的<code>fiber</code>节点绑定一个<code>index</code>属性，表示这个<code>fiber</code>节点在<code>child</code>的位置索引，当节点 diff 的时候，会用老 child 节点的 index 和新的循环里面 lastPlacedIndex(指的上一个可以复用的，不需要移动的节点的老索引)去进行比较，如果 fiber 节点可以服用，而且老 fiber 它对应的真实 DOM 挂载的索引比 lastPlacedIndex 小，那么老 fiber 对应的真实 DOM 就需要移动了</strong></p> <p><strong>如果最后新的节点遍历完成了，但是老的 map 中还有数据，那么全部标记为删除</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//map中剩下是没有被 复用的，全部删除</span>
+existingChildren<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>节点在 diff 的过程中，会有一个单向链表去保存每一个 diff 完成了之后的 fiber 节点信息</strong>
+这个方法里面有一个 <code>resultingFirstChild</code>变量，主要是用来保存我们 diff 好了的 fiber 链表
+<img src="/assets/img/fiber-link.92807b43.png" alt="fiber-link"></p> <h3 id="_1、第一种情况-老的是单节点-新的是多节点"><a href="#_1、第一种情况-老的是单节点-新的是多节点" class="header-anchor">#</a> 1、第一种情况，老的是单节点，新的是多节点</h3> <img src="/assets/img/singleDiff.333a9e6b.png" alt="singleDiff" height="300"> <ul><li><p>这种情况会先走到第一个循环中去，发现第一个新的节点的 key 和老的<code>child</code>不一样，那么会跳出第一次循环，然后走到最后一次循环。</p></li> <li><p>发现 D 节点和 老 A 节点 key 不一样 ，那么会给 D 节点打上一个 <code>Placement</code>的 <code>flag</code> ，然后接着循环</p></li> <li><p>发现新的 A 节点和老的 A 节点可以复用，那么会用老的 A 的 fiber 节点和新的 A 的虚拟 dom 的 prop 属性生成一个新的 fiber 节点，并且修改这个 fiber 节点的 index 属性，按照最新的在 child 树中的位置就行赋值，并且将第一个新的 D 节点的 sibling 指向这个 A，也就是上面说的 <code>resultingFirstChild.sinling = A</code></p></li> <li><p>循环到 C，发现 <code>existingChildren</code>这个 map 数据里面没找到 C，说明不能复用，会直接给节点打上一个 <code>Placement</code>的 <code>flag</code> ，并且最后给 <code>resultingFirstChild</code>这个链表中就行 sibling 绑定</p></li> <li><p>循环完了之后，会去给 map 中剩下的 fiber 节点打上删除的标记</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//map中剩下是没有被 复用的，全部删除</span>
+existingChildren<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">deleteChild</span><span class="token punctuation">(</span>returnFiber<span class="token punctuation">,</span> child<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2、第二种情况-老的是多节点-新的也是多节点"><a href="#_2、第二种情况-老的是多节点-新的也是多节点" class="header-anchor">#</a> 2、第二种情况，老的是多节点，新的也是多节点</h3> <img src="/assets/img/multipleDiff.103555e0.png" alt="multipleDiff" height="300"> <ul><li><p>发现 A 节点和 老 A 节点 key 可以复用 ，那么会根据老的 A 的 fiber 节点和新的 A 的虚拟 dom 的 prop 生成一个新的 fiber 节点，然后接着循环</p></li> <li><p>循环到新的 C 节点的时候，会去在老的 map(existingChildren)中去找，发现有一个老的 C 节点可以复用，那么会根据老的 fiber 节点生成一个新的 fiber 节点，然后会去比较老的节点在兄弟节点中的 index，如果小于新的 index，那么这儿需要标记为移动，这儿不需要去移动，然后接着循环</p></li> <li><p>发现 E 节点没办法复用 ，那么会直接去生成一个新的 fiber 节点，然后会标记为插入新增 flag=2</p></li> <li><p>发现 B 节点和 老 B 节点 key 可以复用 ，那么会根据老的 B 的 fiber 节点和新的 B 的虚拟 dom 的 prop 生成一个新的 fiber 节点，然后比较 index 索引，发现需要移动，给新的 fiber 节点标记为移动</p></li> <li><p>G 和 D 都标记为新增</p></li> <li><p>然后返回 diff 好了的 resultingFirstChild 这个单向链表
+<img src="/assets/img/singleLink.229c4a4f.png" alt="singleLink" height="300"></p></li></ul> <p>这个时候就 diff 完成了，然后就会去走 complete 的流程</p></div> <footer class="page-edit"><!----> <!----></footer> <div><div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/React/React-Fiber/Fiber-dom-diff/commit.html" class="prev">
+        commit阶段
+      </a></span> <span class="next"><a href="/React/Concurrent-Mode/React中的事件优先级调度.html">
+        React事件优先级调度
+      </a>
+      →
+    </span></p></div> <div class="icp-footer"><p>Copyright© 2022-2023 _妄想何方</p> <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022010321号-1</a></div></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a5e2a326.js" defer></script><script src="/assets/js/2.a6634917.js" defer></script><script src="/assets/js/6.4eaec7b1.js" defer></script><script src="/assets/js/11.8af1e3cd.js" defer></script>
+  </body>
+</html>
