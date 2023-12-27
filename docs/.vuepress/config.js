@@ -1,11 +1,10 @@
 const path = require("path");
 module.exports = (options, cotext) => {
-  console.log("options:", options);
-  console.log("cotext:", cotext);
   return {
     title: "学习笔记",
     description:
       "前端技术相关的文章，包含不限于vue，react，webpack，nodejs，算法等等",
+    base: '/Study-Notes/',
     logo: "/assets/img/logo.png",
     themeConfig: {
       nav: [

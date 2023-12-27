@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d docs/.vuepress/dist -r git@github.com:Z-p-github/Study-Notes.git -b gh-pages"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vuepress": "^1.9.7"
   }
 }
