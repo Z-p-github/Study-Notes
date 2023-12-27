@@ -10,7 +10,7 @@ module.exports = (options, cotext) => {
       nav: [
         { text: "Home", link: "/" },
         // { text: 'Guide', link: '/guide/' },
-        { text: "github", link: "https://github.com/Z-p-github/doc-front-end" },
+        { text: "github", link: "https://github.com/Z-p-github/Study-Notes" },
       ],
       sidebar: [
         ["/", "主页"],
