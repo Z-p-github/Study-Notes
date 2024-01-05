@@ -99,6 +99,7 @@ module.exports = (options, cotext) => {
             ['/前端生态/element-plus架构分析.md', 'element-plus样式+打包分析'],
             ['/前端生态/ts类型打包.md', 'ts类型打包'],
             ['/前端生态/vscode扩展工具.md', 'vscode扩展工具实现'],
+            ['/前端生态/svelte.md', 'svelte框架'],
           ],
         },
         {
