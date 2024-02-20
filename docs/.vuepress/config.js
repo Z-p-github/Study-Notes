@@ -100,6 +100,7 @@ module.exports = (options, cotext) => {
             ['/前端生态/ts类型打包.md', 'ts类型打包'],
             ['/前端生态/vscode扩展工具.md', 'vscode扩展工具实现'],
             ['/前端生态/svelte.md', 'svelte框架'],
+            ['/前端生态/i18n.md', '国际化解决方案'],
           ],
         },
         {
