@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d docs/.vuepress/dist -r git@github.com:Z-p-github/Study-Notes.git -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs/.vuepress/dist -r git@github.com:Z-p-github/Study-Notes.git -b gh-pages"
   },
   "keywords": [],
   "author": "",
