@@ -108,6 +108,11 @@ module.exports = (options, cotext) => {
           collapsable: false,
           children: [["/go/mac如何安装grpc.md", "mac安装grpc"]],
         },
+        {
+          title: "AI",
+          collapsable: false,
+          children: [["/AI/agent.md", "前端开发者速通 AI 应用：两周打造你的智能助理"]],
+        },
       ],
     },
     alias: {
